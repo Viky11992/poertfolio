@@ -1,0 +1,12 @@
+# Ignore backend files
+backend/
+node_modules/
+
+# Ignore development files
+.env
+.env.local
+*.log
+
+# Ignore IDE files
+.vscode/
+.idea/

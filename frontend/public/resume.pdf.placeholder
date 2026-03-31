@@ -1,0 +1,82 @@
+# 📄 Resume/CV Placeholder
+
+## How to Add Your Resume
+
+### Option 1: Add Your PDF Resume
+
+1. **Create/Export your resume as PDF**
+   - Use Canva, Word, or any resume builder
+   - Export as PDF format
+   - Name it: `resume.pdf`
+
+2. **Save the file here:**
+   ```
+   D:\portfolio\frontend\public\resume.pdf
+   ```
+
+3. **That's it!** The download button will work automatically.
+
+---
+
+### Option 2: Use Online Resume/LinkedIn
+
+If you don't have a PDF resume yet, you can:
+
+1. **Update the download link** to point to:
+   - Your LinkedIn profile
+   - Google Drive resume link
+   - Notion resume page
+
+2. **Edit this file:**
+   ```
+   frontend/src/components/sections/hero.tsx
+   ```
+
+3. **Change line ~77 from:**
+   ```tsx
+   <a href="/resume.pdf" download>
+   ```
+
+   **To:**
+   ```tsx
+   <a href="https://linkedin.com/in/your-profile" target="_blank">
+   ```
+
+---
+
+### Option 3: Quick Resume Builders
+
+**Free Online Tools:**
+- [Canva](https://canva.com/resumes) - Beautiful templates
+- [Resume.com](https://resume.com) - Free resume builder
+- [Google Docs](https://docs.google.com/document) - Simple & free
+- [FlowCV](https://flowcv.io) - Modern resumes
+
+**Recommended Format:**
+- File name: `resume.pdf`
+- Size: Under 2MB
+- Pages: 1-2 pages max
+- Format: PDF (not Word)
+
+---
+
+## Current Status
+
+❌ **resume.pdf** - Not found (only placeholder exists)
+
+**Download buttons will work once you add the actual PDF file.**
+
+---
+
+## Alternative: Remove Download Button
+
+If you don't want to add a resume, I can:
+1. Remove the "Download CV" button
+2. Replace with "View LinkedIn" button
+3. Replace with "Contact Me" button
+
+**Let me know what you prefer!**
+
+---
+
+**Need Help?** Email: Shoaibarshad470@gmail.com

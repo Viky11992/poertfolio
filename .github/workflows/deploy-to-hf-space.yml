@@ -2,7 +2,6 @@ name: Sync to Hugging Face
 on:
   push:
     branches: [main]
-  # Isse aap manually bhi trigger kar sakte hain GitHub Actions se
   workflow_dispatch:
 
 jobs:
@@ -19,8 +18,12 @@ jobs:
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
-          # Remote URL with Token
-          git remote add hf https://vickey92:$HF_TOKEN@huggingface.co/spaces/vickey92/cv
+          # Git configuration
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action"
           
-          # Force push to overwrite HF space with GitHub code
+          # Force add remote and push
+          # Note: vickey92 is your HF username from the previous screenshot
+          git remote add hf https://vickey92:$HF_TOKEN@huggingface.co/spaces/vickey92/cv || git remote set-url hf https://vickey92:$HF_TOKEN@huggingface.co/spaces/vickey92/cv
+          
           git push --force hf main

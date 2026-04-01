@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { api, type Skill } from "@/lib/api";
 
-const categoryIcons: Record<string, JSX.Element> = {
+const categoryIcons: Record<string, React.ReactNode> = {
   Frontend: <Code className="h-5 w-5" />,
   Backend: <Server className="h-5 w-5" />,
   "AI/ML": <Brain className="h-5 w-5" />,

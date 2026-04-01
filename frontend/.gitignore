@@ -1,1 +1,6 @@
 .vercel
+# Large video files
+frontend/public/images/*.mp4
+*.mp4
+*.mov
+*.avi

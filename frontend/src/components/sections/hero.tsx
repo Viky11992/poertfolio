@@ -17,7 +17,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20"
+      className="min-h-screen flex flex-col justify-start relative overflow-hidden pt-32 pb-16"
     >
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10 dark:from-blue-500/5 dark:via-purple-500/5 dark:to-pink-500/5" />

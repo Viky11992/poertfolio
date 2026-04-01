@@ -3,7 +3,7 @@ name: Deploy to Hugging Face Space
 on:
   push:
     branches: [ main, master ]
-  workflow_dispatch:   # manually trigger karne ke liye
+  workflow_dispatch:
 
 jobs:
   deploy:
@@ -20,5 +20,5 @@ jobs:
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
-          git remote add hf https://huggingface.co/spaces/vickey92/cv
+          git remote add hf https://vickey92:${{ secrets.HF_TOKEN }}@huggingface.co/spaces/vickey92/cv
           git push --force hf HEAD:main

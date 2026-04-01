@@ -179,19 +179,21 @@ ABOUT_ME_DATA = AboutMe(
     name="Shoaib Arshad",
     title="Full Stack Developer | AI-Powered Applications Specialist",
     location="Karachi, Pakistan",
-    bio="""I'm a passionate Full Stack Developer with expertise in building modern, 
-    scalable web applications powered by artificial intelligence. My journey in tech 
-    started with curiosity about how websites work, and it has evolved into a career 
+    bio="""I'm a passionate Full Stack Developer with expertise in building modern,
+    scalable web applications powered by artificial intelligence. My journey in tech
+    started with curiosity about how websites work, and it has evolved into a career
     where I get to solve complex problems using cutting-edge technologies.
-    
-    I specialize in combining traditional full-stack development with AI capabilities, 
-    creating intelligent applications that not only function flawlessly but also 
-    adapt and learn from user interactions. My approach to development is rooted in 
-    two core principles: leveraging AI to accelerate development without compromising 
-    quality, and strictly adhering to specifications to ensure client requirements 
+
+    I specialize in combining traditional full-stack development with AI capabilities,
+    creating intelligent applications that not only function flawlessly but also
+    adapt and learn from user interactions. My approach to development is rooted in
+    two core principles: leveraging AI to accelerate development without compromising
+    quality, and strictly adhering to specifications to ensure client requirements
     are met precisely.""",
     summary="Full Stack Developer specializing in AI-powered applications with expertise in Next.js, Python, FastAPI, and OpenAI integration.",
     avatar_url="/avatar.png",
+    phone="+92-300-2062669",
+    email="Shoaibarshad470@gmail.com",
 )
 
 
@@ -473,10 +475,10 @@ async def ai_chat(query: AIQuery) -> AIResponse:
     from app.core.config import settings
     
     # System prompt for the AI assistant
-    system_prompt = """You are an AI assistant for Shoaib Arshad, a Full Stack Developer 
-    based in Karachi, Pakistan. Answer questions about his skills, experience, and services 
+    system_prompt = """You are an AI assistant for Shoaib Arshad, a Full Stack Developer
+    based in Karachi, Pakistan. Answer questions about his skills, experience, and services
     in a friendly, professional manner.
-    
+
     Key information about Shoaib:
     - Specializes in AI-powered web applications
     - Expert technologies: React, Next.js 15, TypeScript, Python, FastAPI, OpenAI API
@@ -484,14 +486,15 @@ async def ai_chat(query: AIQuery) -> AIResponse:
     - Follows spec-driven development practices
     - Uses AI to accelerate development while maintaining code quality
     - Available for freelance projects and full-time opportunities
-    
-    Keep responses concise (2-4 sentences) unless more detail is requested. 
+    - Contact: +92-300-2062669 | Shoaibarshad470@gmail.com
+
+    Keep responses concise (2-4 sentences) unless more detail is requested.
     Be helpful and encourage potential clients to reach out via the contact form."""
 
     if not settings.gemini_api_key and not settings.openai_api_key:
         # Return a mock response if no API key is configured
         return AIResponse(
-            response="""Hi! I'm Shoaib's AI assistant. 
+            response="""Hi! I'm Shoaib's AI assistant.
 
 **About Shoaib:**
 - Full Stack Developer based in Karachi, Pakistan
@@ -503,6 +506,10 @@ async def ai_chat(query: AIQuery) -> AIResponse:
 - Frontend: React, Next.js, TypeScript, Tailwind CSS
 - Backend: Python, FastAPI, Node.js, PostgreSQL
 - AI/ML: OpenAI API, OpenAI Agents SDK, Context Engineering, Prompt Engineering
+
+**Contact:**
+- Phone: +92-300-2062669
+- Email: Shoaibarshad470@gmail.com
 
 To enable full AI chat functionality, please configure the API keys in the backend .env file.""",
             conversation_history=query.conversation_history or [],

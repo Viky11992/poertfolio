@@ -94,6 +94,8 @@ class AboutMe(BaseModel):
     bio: str
     summary: str
     avatar_url: Optional[str] = None
+    phone: Optional[str] = None
+    email: Optional[str] = None
 
 
 class UploadResponse(BaseModel):

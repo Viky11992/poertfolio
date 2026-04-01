@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Github, Linkedin, Mail, Heart } from "lucide-react";
+import { Github, Linkedin, Mail, Heart, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function Footer() {
@@ -67,7 +67,7 @@ export function Footer() {
           {/* Social Links */}
           <div>
             <h3 className="font-semibold mb-4">Connect With Me</h3>
-            <div className="flex gap-2">
+            <div className="flex gap-2 flex-wrap">
               <Button variant="outline" size="icon" asChild>
                 <Link
                   href="https://github.com/Viky11992"
@@ -89,6 +89,11 @@ export function Footer() {
               <Button variant="outline" size="icon" asChild>
                 <Link href="mailto:Shoaibarshad470@gmail.com">
                   <Mail className="h-5 w-5" />
+                </Link>
+              </Button>
+              <Button variant="outline" size="icon" asChild>
+                <Link href="tel:+923002062669">
+                  <Phone className="h-5 w-5" />
                 </Link>
               </Button>
             </div>

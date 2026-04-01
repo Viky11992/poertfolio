@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Mail, MapPin, Send, User, MessageSquare, Loader2 } from "lucide-react";
+import { Mail, MapPin, Send, User, MessageSquare, Loader2, Phone } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -85,6 +85,12 @@ export function Contact() {
       label: "Email",
       value: "Shoaibarshad470@gmail.com",
       href: "mailto:Shoaibarshad470@gmail.com",
+    },
+    {
+      icon: <Phone className="h-5 w-5" />,
+      label: "Phone",
+      value: "+92-300-2062669",
+      href: "tel:+923002062669",
     },
     {
       icon: <MapPin className="h-5 w-5" />,

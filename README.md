@@ -1,13 +1,14 @@
 # Shoaib Arshad - Portfolio Website
 
-A modern, professional portfolio website built with Next.js 15, FastAPI, and AI integration.
+A modern, professional portfolio website built with Next.js 16, FastAPI, and AI integration.
 
 ![Portfolio Preview](./preview.png)
 
 ## 🚀 Tech Stack
 
 ### Frontend
-- **Next.js 15** - React framework with App Router
+- **Next.js 16** - React framework with App Router
+- **React 19** - Latest React version
 - **TypeScript** - Type-safe development
 - **Tailwind CSS** - Utility-first styling
 - **shadcn/ui** - Beautiful UI components
@@ -16,7 +17,9 @@ A modern, professional portfolio website built with Next.js 15, FastAPI, and AI 
 ### Backend
 - **FastAPI** - Modern Python web framework
 - **Python** - Backend logic and AI integration
+- **Docker** - Containerized deployment
 - **OpenAI API** - AI chat functionality
+- **Google Gemini** - Alternative AI model
 - **Pydantic** - Data validation
 
 ### Features

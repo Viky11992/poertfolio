@@ -1,14 +1,13 @@
-name: Deploy to Hugging Face Space
-
+name: Sync to Hugging Face
 on:
   push:
-    branches: [ main, master ]
+    branches: [main]
+  # Isse aap manually bhi trigger kar sakte hain GitHub Actions se
   workflow_dispatch:
 
 jobs:
-  deploy:
+  build-and-push:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -16,9 +15,12 @@ jobs:
           fetch-depth: 0
           lfs: true
 
-      - name: Push to Hugging Face Space
+      - name: Push to Hugging Face
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
-          git remote add hf https://vickey92:${{ secrets.HF_TOKEN }}@huggingface.co/spaces/vickey92/cv
-          git push --force hf HEAD:main
+          # Remote URL with Token
+          git remote add hf https://vickey92:$HF_TOKEN@huggingface.co/spaces/vickey92/cv
+          
+          # Force push to overwrite HF space with GitHub code
+          git push --force hf main

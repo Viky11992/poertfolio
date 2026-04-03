@@ -50,12 +50,12 @@ PROJECTS_DATA: List[Project] = [
         description="An intelligent agent that converts PDF study notes into: "
      "1. Structured summaries (markdown format) "
      "2. Interactive quizzes (MCQs + short answer questions)",
-        technologies=["Streamlit", "FastAPI", "OpenAI API", "AI Model: Google Gemini 2.5 Flash", "TypeScript","PDF Processing: pypdf","Protocol: Model Context Protocol (MCP)","Config: dotenv for API keys"],
+        technologies=["Streamlit", "FastAPI", "OpenAI API", "Grok", "AI Model: Google Gemini 2.5 Flash", "TypeScript","PDF Processing: pypdf","Protocol: Model Context Protocol (MCP)","Config: dotenv for API keys"],
         image_url="/images/Study helper robot in colorful learning design.png",
         video_url=None,
         media_urls=["/projects/code-assistant-1.png", "/projects/code-assistant-2.png"],
         github_url="https://github.com/Viky11992/Summarizer-Quiz-Generator.git",
-        live_url="https://study-notes-agent.vercel.app",
+        live_url="https://study-notes-summarizer-quiz-generator-4omhsaavfchq9cnlrtzynj.streamlit.app/",
         featured=True,
     ),
     Project(
